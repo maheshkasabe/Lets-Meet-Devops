@@ -1,4 +1,4 @@
-From node:17-alpine
+FROM node:alpine
 
 Run mkdir -p /home/src/frontend
 
