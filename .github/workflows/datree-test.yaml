@@ -2,9 +2,9 @@ name: Datree-policy-Checks
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Datree Policy Check
-        uses: datreeio/action-datree@main
+        uses: datreeio/action-datree@master
         with:
           path: 'Deployments/K8s/argocd.yaml'
           cliArguments: '--only-k8s-files -p Argo'
