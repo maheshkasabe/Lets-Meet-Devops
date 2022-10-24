@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: maheshkasbe/frontend:latest
+        - image: maheshkasbe/frontend:v0.0.2
           name: frontend-container
           ports:
             - containerPort: 3000

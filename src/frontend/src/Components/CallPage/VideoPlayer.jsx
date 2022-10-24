@@ -8,7 +8,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import emailjs from "emailjs-com"
 
 const VideoPlayer = ({ socket, room }) => {
-    const {    call,
+    const {    
+        call,
         callAccepted,
         myVideo,
         userVideo,

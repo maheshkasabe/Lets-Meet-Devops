@@ -1,11 +1,14 @@
-FROM node:alpine
-
+FROM node:alpine as prod
 Run mkdir -p /home/src/frontend
-
 COPY . /home/src/frontend
-
 WORKDIR /home/src/frontend
-
 RUN yarn install
+RUN yarn build
+CMD ["yarn","serve","build"]
 
-CMD ["yarn","run","start"]
+FROM node:alpine as test
+Run mkdir -p /home/src/frontend
+COPY . /home/src/frontend
+WORKDIR /home/src/frontend
+RUN yarn install
+CMD ["yarn","run","test"]

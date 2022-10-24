@@ -4,10 +4,10 @@ metadata:
   name: app-backend
   namespace: argocd
 spec:
-  project: app
+  project: default
   source:
     repoURL: 'https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/'
-    path: Deployments/k8s/backend
+    path: Deployments/K8s/backend
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
@@ -25,10 +25,10 @@ metadata:
   name: app-frontend
   namespace: argocd
 spec:
-  project: app
+  project: default
   source:
     repoURL: 'https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/'
-    path: Deployments/k8s/frontend
+    path: Deployments/K8s/frontend
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'

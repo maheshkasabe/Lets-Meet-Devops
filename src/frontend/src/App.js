@@ -8,7 +8,7 @@ import VideoPlayer from './Components/CallPage/VideoPlayer'
 const socket = io.connect("http://localhost:3001");
 
 const App = () => {
-  const {  setName,callUser } = useContext(SocketContext);
+   const  { setName,callUser }  = useContext(SocketContext);
 
   const [idToCall, setIdToCall] = useState("");
   const [username, setUsername] = useState("");
@@ -41,7 +41,7 @@ const App = () => {
                 <button id='btn2' onClick={func}>New Meeting </button> </div>
                  <div className='input2'> 
                  <input id='btn3' placeholder='Enter Meeting Code' onChange={(e) => setIdToCall(e.target.value)} />
-                  <input id='btn4' placeholder='Enter Name' onChange={(e) => setName(e.target.value)} />
+                  <input id='btn4' placeholder='EnterName' onChange={(e) => setName(e.target.value)} />
                   <button id='btn5' onClick={func}> Join Meeting </button> </div>
                  </div>
        
