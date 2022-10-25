@@ -1,21 +1,22 @@
-# Let's Meet a one-O-one Video Chatting web application . 
+# Let's Meet is a one-O-one Video Chatting web application . 
 
 
 [![Continuous-Staging (Terraform)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/terraform.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/terraform.yaml) [![Datree-policy-Checks](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/datree-test.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/datree-test.yaml) [![Docker Build Backend](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-backend.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-backend.yaml) [![Docker Build Frontend](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-frontend.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-frontend.yaml) [![K8s Manifest Sec checks Kubescape](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/kubescape.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/kubescape.yaml)
 
 
+![alt tag](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/blob/master/Images/0.png?raw=true)
+
 ## Tech Stack 
+
 1.  Node.js
 2. ReactJS 
-3. WebRTC
-4. Socket.io
-5. Github Actions 
-6. CircleCI & Jenekins
-7. Terraform & Ansible
-8. AWS & Azure 
-9. Kubernetes & Docker 
-10. ArgoCD & Flux
-11. Datree , Jest & KubeScape (for Testing images and yaml files validation)
+3. WebRTC & Socketio
+4. Github Actions , CircleCI & Jenekins
+5. Terraform & Ansible
+6. AWS & Azure 
+7. Kubernetes & Docker 
+8. ArgoCD & Flux
+9. Datree.io , Jest & KubeScape (for Testing images and yaml files validation)
 
 ## What is the end-result ??
 
@@ -37,6 +38,18 @@ git clone https://github.com/Mahesh-Kasabe/Lets-Meet-Devops
 cd Lets-Meet-Devops
 
 docker-compose up
+
+```
+
+## Running App on your kubernetes cluster
+
+```bash
+
+git clone https://github.com/Mahesh-Kasabe/Lets-Meet-Devops
+
+cd Lets-Meet-Devops/Deployments/K8s
+
+kubectl apply -f argocd.yaml 
 
 ```
 
