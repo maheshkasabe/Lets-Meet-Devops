@@ -1,10 +1,8 @@
 # Let's Meet a one-O-one Video Chatting web application . 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 [![Continuous-Staging (Terraform)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/terraform.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/terraform.yaml) [![Datree-policy-Checks](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/datree-test.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/datree-test.yaml) [![Docker Build Backend](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-backend.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-backend.yaml) [![Docker Build Frontend](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-frontend.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/cd-frontend.yaml) [![K8s Manifest Sec checks Kubescape](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/kubescape.yaml/badge.svg)](https://github.com/Mahesh-Kasabe/Lets-Meet-Devops/actions/workflows/kubescape.yaml)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Tech Stack 
 1.  Node.js
