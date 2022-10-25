@@ -7,16 +7,16 @@ ci/cd - actions/docker - terraform-aws - docker-compose - done
 
 ci/cd --
 
-jenekins
-actions 
-circleci
+jenekins - 
+actions - done 
+circleci - done 
 
-cloud 
-aws
-k8s cluster
-terraform
+cloud
+aws - done 
+k8s cluster  - done
+terraform - done
 
 for tests
-datree.io 
-jest
-
+datree.io - done
+jest - done 
+kubescape - done 

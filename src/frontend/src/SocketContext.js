@@ -9,7 +9,7 @@ const socket = io('http://localhost:3001');
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
   const [callEnded, setCallEnded] = useState(false);
-  const [stream, setStream] = useState("");
+  const [stream, setStream] = useState(null);
   const [name, setName] = useState("");
   const [call, setCall] = useState({});
   const [me, setMe] = useState('');
@@ -19,18 +19,22 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
-    navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((currentStream) => {
-        setStream(currentStream);
-        console.log(currentStream);
-        myVideo.current.srcObject = currentStream;
-      });
-
-    socket.on('me', (id) => setMe(id));
+    const getUserMedia = async () => {
+        try {
+            const currentStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            setStream(currentStream)
+            myVideo.current.srcObject = currentStream
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    getUserMedia()
+    socket.on('me', id => setMe(id))
 
     socket.on('callUser', ({ from, name: callerName, signal }) => {
-      setCall({ isReceivingCall: true, from, name: callerName, signal });
-    });
-  }, []);
+        setCall({ isReceivingCall: true, from, name: callerName, signal  })
+    })
+}, [])
 
   const answerCall = () => {
     setCallAccepted(true);

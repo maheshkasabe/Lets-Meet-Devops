@@ -10,8 +10,8 @@
 body{
   margin: 0;
   padding: 0;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: hidden; 
+ overflow-x: hidden;
 }
 
 
@@ -42,13 +42,13 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vmax;
   text-align: left;
-  width: 100vmax;
+  width: 100vw;
 }
 
 .contain1{
-  width: min-content;    
+  width: fit-content;
 }
 .contain1 p{
   font-size: xxx-large;
@@ -119,4 +119,19 @@ body{
 
 .contain2 img{
   width: 700px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: left;
+    width: 100vw;
+  }
+  .contain2 img{
+    width: 600px;
+  }
 }

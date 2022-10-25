@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import VideoPlayer from './Components/CallPage/VideoPlayer';
+import App from './App';
 
 test('login input show be rendered', () =>{
-  render(<VideoPlayer />);
+  render(<App />);
   const logininput = screen.getByRole("button");
   expect(logininput).toBeInTheDocument();
 })

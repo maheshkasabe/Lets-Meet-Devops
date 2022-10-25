@@ -33,7 +33,7 @@ const App = () => {
                <div className='container'>
        
                  <div className='contain1'>
-                 <p>Meet, chat, call, and collaborate in just one place</p>
+                 <p>Meet, chat, call, and <br/> collaborate in just one place</p>
                  <h5>Instantly start a video chat for two people with the touch of a button</h5>
                  
                  <div className='inputs'>
@@ -41,7 +41,7 @@ const App = () => {
                 <button id='btn2' onClick={func}>New Meeting </button> </div>
                  <div className='input2'> 
                  <input id='btn3' placeholder='Enter Meeting Code' onChange={(e) => setIdToCall(e.target.value)} />
-                  <input id='btn4' placeholder='EnterName' onChange={(e) => setName(e.target.value)} />
+                  <input id='btn4' placeholder='Enter Name' onChange={(e) => setName(e.target.value)} />
                   <button id='btn5' onClick={func}> Join Meeting </button> </div>
                  </div>
        

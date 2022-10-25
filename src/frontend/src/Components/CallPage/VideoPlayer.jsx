@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useContext } from 'react'
+import React, { useRef , useState,useEffect,useContext } from 'react'
 import { SocketContext } from '../../SocketContext'
 import "./videoplayer.css"
 import { BsFillMicFill,BsFillCameraVideoFill,BsFillPersonPlusFill,BsClipboardCheck } from "react-icons/bs"
@@ -11,14 +11,11 @@ const VideoPlayer = ({ socket, room }) => {
     const {    
         call,
         callAccepted,
-        myVideo,
         userVideo,
         stream,
         name,
-        setName,
         callEnded,
         me,
-        callUser,
         leaveCall,
         answerCall, } = useContext(SocketContext);
 
@@ -65,6 +62,20 @@ const VideoPlayer = ({ socket, room }) => {
     });
   }
 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const getUserMedia = async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({video: true});
+        videoRef.current.srcObject = stream;
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getUserMedia();
+  }, [])
+
     return (
         <div className='videoplayer'>
             <div className='header'>
@@ -91,7 +102,7 @@ const VideoPlayer = ({ socket, room }) => {
             {stream &&(
                 <div>
                     <p>{name}</p>
-                    <video playsInline muted ref={myVideo} autoPlay />
+                    <video playsInline ref={videoRef} autoPlay />
                 </div>
                 
             )}
@@ -99,7 +110,7 @@ const VideoPlayer = ({ socket, room }) => {
             {callAccepted && !callEnded &&  (
                     <div>
                         <p>{call.name}</p>
-                        <video playsInline muted ref={userVideo} autoPlay />
+                        <video playsInline ref={userVideo} autoPlay />
                      </div>
             )}
 

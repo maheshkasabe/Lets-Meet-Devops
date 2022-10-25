@@ -4,9 +4,9 @@ import App from './App';
 import { ContextProvider } from './SocketContext';
 
 ReactDOM.render(
-<ContextProvider> 
-    <App /> 
-</ContextProvider>,
+    <ContextProvider>
+    <App />
+  </ContextProvider>,
 document.getElementById('root'));
 
 
