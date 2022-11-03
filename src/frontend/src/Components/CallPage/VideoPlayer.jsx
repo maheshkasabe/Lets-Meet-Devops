@@ -62,7 +62,7 @@ const VideoPlayer = ({ socket, room }) => {
     });
   }
 
-  const videoRef = useRef(null);
+  const videoRef = useRef();
 
   useEffect(() => {
     const getUserMedia = async () => {
