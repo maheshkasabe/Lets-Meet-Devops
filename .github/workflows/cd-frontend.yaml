@@ -50,7 +50,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.PAT }}
       with: 
-        source_file: /Deployments/K8s/frontend/deployment.yaml
+        source_file: Deployments/K8s/frontend/deployment.yaml
         destination_repo: Mahesh-Kasabe/Lets-Meet-Devops
         destination_branch: master
         destination_folder: k8s
