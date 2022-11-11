@@ -11,5 +11,4 @@ Run mkdir -p /home/src/frontend
 COPY . /home/src/frontend
 WORKDIR /home/src/frontend
 RUN yarn install
-RUN yarn run test
-RUN q
+RUN yarn run test a --clearCache
