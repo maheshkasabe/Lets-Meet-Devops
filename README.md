@@ -53,6 +53,30 @@ kubectl apply -f argocd.yaml
 
 ```
 
+### Running App on AWS
+
+```bash 
+
+git clone https://github.com/Mahesh-Kasabe/Lets-Meet-Devops
+
+cd Lets-Meet-Devops/Deployments/IAC/AWS
+
+terraform apply
+
+```
+
+### Deploying to Civo Cluster
+
+```bash 
+
+git clone https://github.com/Mahesh-Kasabe/Lets-Meet-Devops
+
+cd Lets-Meet-Devops/Deployments/IAC/CIVO
+
+terraform apply
+
+```
+
 ## Demo
 
 live app : https://letsmeetapp.netlify.app/
