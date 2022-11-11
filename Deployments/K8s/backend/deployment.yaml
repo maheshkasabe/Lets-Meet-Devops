@@ -15,7 +15,7 @@ spec:
         app: backend
     spec:
       containers:
-        - image: maheshkasbe/backend:v0.0.2
+        - image: maheshkasbe/backend:v0.0.3
           name: backend-container
           ports:
             - containerPort: 3001

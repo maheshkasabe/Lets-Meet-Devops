@@ -27,7 +27,7 @@ jobs:
     - name: create image
       run: |
         cd src/frontend
-        docker build -t frontend:${{ steps.get-version.outputs.VERSION }} . 
+        docker build --target prod -t frontend:${{ steps.get-version.outputs.VERSION }} . 
     - name: get image ID
       id: image-id
       run: |

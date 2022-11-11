@@ -27,7 +27,7 @@ jobs:
     - name: create image
       run: |
         cd src/backend
-        docker build -t backend:${{ steps.get-version.outputs.VERSION }} . 
+        docker build --target prod -t backend:${{ steps.get-version.outputs.VERSION }} . 
     - name: get image ID
       id: image-id
       run: |

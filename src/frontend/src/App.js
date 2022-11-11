@@ -5,7 +5,7 @@ import main from "./main-logo.png"
 import { io } from 'socket.io-client'
 import VideoPlayer from './Components/CallPage/VideoPlayer'
 
-const socket = io.connect("http://backend:3001");
+const socket = io.connect("http://localhost:3001");
 
 const App = () => {
    const  { setName,callUser }  = useContext(SocketContext);
