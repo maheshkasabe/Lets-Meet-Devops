@@ -11,4 +11,4 @@ Run mkdir -p /home/src/frontend
 COPY . /home/src/frontend
 WORKDIR /home/src/frontend
 RUN yarn install
-RUN yarn run test
+RUN yarn run test --forceExit
