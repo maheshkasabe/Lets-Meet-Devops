@@ -82,5 +82,7 @@ terraform apply
 
 live app : https://letsmeetapp.netlify.app/
 
+Article: https://maheshkasbe.hashnode.dev/how-to-deploy-a-full-stack-webapp-on-cloud-using-best-devops-practices
+
 
 
